@@ -24,7 +24,7 @@ const productSchema  = new mongoose.Schema({
     type: Number,
     default: 0,
   }}, {
-    timeStamps: true,
+    timestamps: true,
   });
 
   export default mongoose.model('Product', productSchema);
