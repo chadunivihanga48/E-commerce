@@ -22,8 +22,8 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post('/auth/signup', form);
-      setMsg(response.data.message);
+      const res = await api.post('/auth/signup', form);
+      setMsg(res.data.message);
       // Handle successful signup (e.g., redirect to login)
     } catch (error) {
       setMsg(error.response?.data?.message || "An error occured");
